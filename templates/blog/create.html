@@ -1,0 +1,19 @@
+<style>
+    #createpost {
+    background-color: green;
+    }
+    form p{
+    color: gray;
+    margin: 20px;
+    }
+</style>
+
+{% extends "./base.html" %}
+{% block content %}
+<h1 class="page-header">Create new post</h1>
+<form id="createpost" action="{% url 'create' %}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Save" class="btn btn-default">
+</form>
+{% endblock %}

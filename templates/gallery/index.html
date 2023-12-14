@@ -1,0 +1,9 @@
+ {% extends 'blog/base.html' %}
+ {% block content %}
+ <h2>Gallery <a href="../gallery/upload">Upload image</a></h2>
+
+ {% for photo in photos %}
+ <img src="{{photo.image.url}}" alt="{{photo.description}}" width=100%>
+ <hr>
+ {%endfor%}
+ {%endblock%}

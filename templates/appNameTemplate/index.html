@@ -1,0 +1,15 @@
+{% extends "./base.html" %}
+
+{% block content %}
+    <h1 >{{title}}</h1>
+    <h2>date from python function {{now}}</h2>
+    <h2>date from django tag {% now "d/m/Y  H:i:s " %}</h2>
+    <h2> number = {{number}}</h2>
+
+<ul>
+    {% for item  in list_data%}
+    <li>{{item|title}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
